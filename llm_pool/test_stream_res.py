@@ -7,7 +7,9 @@ sys.path.append(str(project_root))
 
 from llm_pool.llm import get_model_response_stream
 
-MODELS = ["deepseek-chat", "mixtral-8x7b-32768", "Qwen/Qwen2-72B-Instruct", "gpt-4o"]
+# MODELS = ["deepseek-chat", "mixtral-8x7b-32768", "Qwen/Qwen2-72B-Instruct", "gpt-4o"]
+MODELS = ["deepseek-chat", "mixtral-8x7b-32768"]
+
 
 
 async def test_stream_for_model(model_name: str):

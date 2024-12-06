@@ -57,6 +57,14 @@ class SearchTool(BaseTool):
                 message=f"Error performing search: {str(e)}"
             )
 
+def serpapi_search(query: str):
+    search_tool = SearchTool()
+    
+    # 测试搜索
+    print("web searching...")
+    result = search_tool.search_web(query)
+    return result.content
+
 
 if __name__ == "__main__":
     # 测试搜索工具
@@ -65,5 +73,5 @@ if __name__ == "__main__":
     
     # 测试搜索
     print("Testing web search:")
-    result = search_tool.search_web("什么是人工智能？")
+    result = search_tool.search_web("法国的首都在哪里")
     print(result) 
